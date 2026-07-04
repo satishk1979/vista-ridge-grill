@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vista Ridge Grill — Breakfast &amp; Lunch · Cedar Park, TX</title>
+<meta name="description" content="Vista Ridge Grill at Fizola Market — a 5-star family-owned breakfast &amp; lunch grill in Cedar Park, TX. Chicago Italian beef, brisket philly, loaded breakfast tacos, burritos &amp; homemade salsas. Order ahead: (512) 969-7965.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="theme-color" content="#1C140C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Semi+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Restaurant","name":"Vista Ridge Grill",
+  "servesCuisine":["Breakfast","American","Sandwiches"],
+  "address":{"@type":"PostalAddress","streetAddress":"700 N Vista Ridge Blvd","addressLocality":"Cedar Park","addressRegion":"TX","postalCode":"78613","addressCountry":"US"},
+  "telephone":"+1-512-969-7965","priceRange":"$",
+  "geo":{"@type":"GeoCoordinates","latitude":30.5284935,"longitude":-97.7895398},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"06:30","closes":"14:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"07:30","closes":"12:00"}
+  ],
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"142"}
+}
+</script>
+<style>
+  :root{
+    --cream:#FBF5E8; --cream2:#F3E7CE; --card:#FFFDF7; --ink:#241A10; --slate:#6A5A44;
+    --yolk:#F2A81C; --yolk-dk:#D48E0A; --paprika:#C23A22; --paprika-dk:#9E2C17;
+    --char:#1B140B; --line:#E6D8BB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  h1,h2,h3,.disp{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;letter-spacing:.005em}
+  .cond{font-family:'Barlow Semi Condensed',sans-serif}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+  .eyebrow{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:var(--paprika)}
+
+  /* top ticker */
+  .ticker{background:var(--paprika);color:#fff;text-align:center;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:13.5px;padding:8px 16px}
+  .ticker b{color:var(--yolk)}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:70;background:var(--char);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:12px clamp(16px,4vw,48px);border-bottom:3px solid var(--yolk)}
+  .brand{font-family:'Anton',sans-serif;font-size:22px;letter-spacing:.02em;text-transform:uppercase;display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--cream)}
+  .brand .yolk{color:var(--yolk)}
+  .nav-links{display:flex;gap:26px;align-items:center}
+  .nav-links a{font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:15px;text-decoration:none;opacity:.85;transition:opacity .2s,color .2s}
+  .nav-links a:hover{opacity:1;color:var(--yolk)}
+  .nav-order{background:var(--paprika);color:#fff !important;padding:9px 18px;border-radius:3px;opacity:1 !important}
+  .nav-order:hover{background:var(--yolk);color:var(--char) !important}
+  @media(max-width:760px){.nav-links a:not(.nav-order){display:none}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:16px;padding:14px 24px;border-radius:3px;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .12s,background .2s}
+  .btn svg{width:18px;height:18px}
+  .btn-red{background:var(--paprika);color:#fff;border-color:var(--paprika-dk);box-shadow:5px 5px 0 var(--ink)}
+  .btn-red:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 var(--ink)}
+  .btn-cream{background:var(--card);color:var(--ink);border-color:var(--ink);box-shadow:5px 5px 0 rgba(36,26,16,.2)}
+  .btn-cream:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 rgba(36,26,16,.28)}
+
+  /* hero */
+  .hero{background:var(--cream);padding:clamp(38px,6vw,76px) 0 clamp(44px,6vw,84px);position:relative}
+  .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(55% 55% at 82% 18%,rgba(242,168,28,.2),transparent 70%);pointer-events:none}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center}
+  @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:32px}}
+  .hero h1{font-size:clamp(44px,7.4vw,90px);color:var(--ink);margin:14px 0 6px}
+  .hero h1 .y{color:var(--paprika)}
+  .hero .lede{font-size:clamp(16.5px,1.6vw,20px);color:var(--slate);max-width:38ch;margin-top:14px}
+  .hero .lede b{color:var(--ink)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .hours-note{margin-top:20px;font-family:'Barlow Semi Condensed',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--slate);font-size:14.5px}
+  .hours-note b{color:var(--ink)}
+
+  /* rating card */
+  .ratecard{background:var(--char);color:var(--cream);border:4px solid var(--ink);border-radius:10px;padding:30px 28px;box-shadow:14px 14px 0 rgba(36,26,16,.12);transform:rotate(1.3deg);position:relative}
+  .ratecard::after{content:"";position:absolute;inset:9px;border:2px dashed rgba(251,245,232,.35);border-radius:5px;pointer-events:none}
+  .ratecard .big{font-family:'Anton',sans-serif;font-size:76px;line-height:.9;color:var(--yolk)}
+  .ratecard .stars{color:var(--yolk);font-size:22px;letter-spacing:3px;margin:4px 0}
+  .ratecard .sub{font-family:'Barlow Semi Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:13.5px;opacity:.9}
+  .ratecard .divider{height:2px;background:rgba(251,245,232,.3);margin:16px 0}
+  .ratecard .loc{font-size:14.5px;line-height:1.5}
+  .ratecard .loc b{color:var(--yolk)}
+
+  /* marquee */
+  .strip{background:var(--yolk);color:var(--char);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);overflow:hidden;padding:11px 0}
+  .marquee{display:flex;white-space:nowrap;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:19px;letter-spacing:.04em}
+  .marquee span{padding:0 22px;display:inline-flex;gap:22px;align-items:center}
+  .marquee .s{color:var(--paprika)}
+  @media (prefers-reduced-motion:no-preference){.marquee{animation:sc 24s linear infinite}}
+  @keyframes sc{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* story */
+  .story{background:var(--cream2);padding:clamp(52px,7vw,92px) 0}
+  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,60px);align-items:center}
+  @media(max-width:820px){.story-grid{grid-template-columns:1fr}}
+  .story h2{font-size:clamp(32px,4.4vw,52px);color:var(--ink);margin:12px 0 16px}
+  .story h2 em{font-style:normal;color:var(--paprika)}
+  .story p{font-size:16.5px;color:var(--slate);margin-bottom:14px;max-width:52ch}
+  .story p b{color:var(--ink)}
+  .badges{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .badge{background:var(--card);border:2px solid var(--line);border-radius:8px;padding:20px}
+  .badge .n{font-family:'Anton',sans-serif;font-size:30px;color:var(--paprika);line-height:1}
+  .badge .l{font-family:'Barlow Semi Condensed',sans-serif;text-transform:uppercase;letter-spacing:.05em;font-size:13px;color:var(--slate);margin-top:5px}
+
+  /* menu */
+  .menu{padding:clamp(52px,7vw,92px) 0}
+  .menu-head{text-align:center;max-width:640px;margin:0 auto clamp(34px,5vw,54px)}
+  .menu-head h2{font-size:clamp(38px,6vw,74px);color:var(--ink);margin:10px 0}
+  .menu-head p{color:var(--slate)}
+  .cat{margin-bottom:clamp(36px,5vw,56px)}
+  .cat-title{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+  .cat-title h3{font-size:clamp(24px,3vw,34px);color:var(--paprika);white-space:nowrap}
+  .cat-title .rule{height:3px;flex:1;background:repeating-linear-gradient(90deg,var(--line) 0 10px,transparent 10px 16px)}
+  .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px}
+  .item{background:var(--card);border:2px solid var(--line);border-radius:8px;padding:18px 20px;position:relative;transition:transform .12s,box-shadow .12s,border-color .2s}
+  .item:hover{transform:translateY(-3px);box-shadow:8px 8px 0 rgba(36,26,16,.1);border-color:var(--yolk)}
+  .item .name{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--ink)}
+  .item .desc{font-size:14.5px;color:var(--slate);margin-top:5px}
+  .fav{position:absolute;top:-11px;right:14px;background:var(--yolk);color:var(--char);font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:11px;padding:3px 10px;border-radius:20px;border:2px solid var(--ink)}
+  .menu-note{text-align:center;color:var(--slate);font-size:14px;margin-top:24px;font-style:italic}
+
+  /* reviews */
+  .reviews{background:var(--char);color:var(--cream);padding:clamp(52px,7vw,92px) 0}
+  .reviews .eyebrow{color:var(--yolk)}
+  .reviews h2{font-size:clamp(34px,5vw,58px);color:var(--cream);margin:10px 0 6px}
+  .reviews .sub{color:rgba(251,245,232,.72);margin-bottom:clamp(32px,4vw,46px)}
+  .r-grid{columns:3;column-gap:18px}
+  @media(max-width:900px){.r-grid{columns:2}}
+  @media(max-width:600px){.r-grid{columns:1}}
+  .rev{background:var(--card);color:var(--ink);border-radius:8px;padding:22px;margin:0 0 18px;break-inside:avoid;border:3px solid var(--ink);box-shadow:6px 6px 0 rgba(0,0,0,.28)}
+  .rev .st{color:var(--yolk);letter-spacing:2px;font-size:15px}
+  .rev .q{font-size:16px;line-height:1.55;margin:10px 0 14px}
+  .rev .q .em{color:var(--paprika);font-weight:600}
+  .rev .who{display:flex;align-items:center;gap:10px;border-top:2px dashed var(--line);padding-top:12px}
+  .rev .av{width:34px;height:34px;border-radius:50%;background:var(--paprika);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Anton',sans-serif;font-size:16px;flex:none}
+  .rev .who .meta{font-family:'Barlow Semi Condensed',sans-serif;line-height:1.2}
+  .rev .who .meta b{text-transform:uppercase;letter-spacing:.03em;font-size:14px}
+  .rev .who .meta small{color:var(--slate);font-size:12px}
+  .rev-cta{text-align:center;margin-top:14px}
+
+  /* order/visit */
+  .order{padding:clamp(52px,7vw,92px) 0;background:var(--paprika);color:#fff}
+  .order .eyebrow{color:var(--yolk)}
+  .order h2{font-size:clamp(34px,5vw,62px);color:#fff;margin:10px 0 10px}
+  .order .sub{max-width:52ch;color:rgba(255,255,255,.9);margin-bottom:clamp(30px,4vw,42px);font-size:17px}
+  .order-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:3px solid var(--ink);border-radius:12px;overflow:hidden;background:var(--card);color:var(--ink)}
+  @media(max-width:820px){.order-grid{grid-template-columns:1fr}}
+  .order-info{padding:clamp(26px,4vw,40px)}
+  .vrow{display:flex;gap:13px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+  .vrow:last-of-type{border-bottom:0}
+  .vrow svg{width:22px;height:22px;color:var(--paprika);flex:none;margin-top:3px}
+  .vrow .lbl{font-family:'Barlow Semi Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:11px;color:var(--slate)}
+  .vrow .val{font-size:15.5px;color:var(--ink)}
+  .vrow .val a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--paprika)}
+  .order-info .btn{margin-top:20px;width:100%;justify-content:center}
+  .order-map iframe{width:100%;height:100%;min-height:320px;border:0}
+  .ways{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .way{font-family:'Barlow Semi Condensed',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:12.5px;background:var(--cream2);border:2px solid var(--line);border-radius:20px;padding:6px 14px;color:var(--ink)}
+
+  /* footer */
+  footer{background:var(--char);color:var(--cream);padding:clamp(44px,5vw,64px) 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:34px}
+  @media(max-width:760px){.foot-grid{grid-template-columns:1fr;gap:26px}}
+  .foot-brand{font-family:'Anton',sans-serif;font-size:32px;text-transform:uppercase}
+  .foot-brand .y{color:var(--yolk)}
+  .foot-tag{color:rgba(251,245,232,.7);margin-top:8px;max-width:34ch}
+  .foot h4{font-family:'Barlow Semi Condensed',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:14px;color:var(--yolk);margin-bottom:14px}
+  .foot a,.foot p{color:rgba(251,245,232,.82);text-decoration:none;font-size:15px;display:block;margin-bottom:8px}
+  .foot a:hover{color:var(--yolk)}
+  .hours-row{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;color:rgba(251,245,232,.82);border-bottom:1px solid rgba(251,245,232,.12);padding:5px 0}
+  .hours-row .cl{color:var(--yolk)}
+  .foot-bottom{border-top:1px solid rgba(251,245,232,.15);margin-top:38px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;color:rgba(251,245,232,.55)}
+
+  :focus-visible{outline:3px solid var(--yolk);outline-offset:3px;border-radius:3px}
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto !important;transition:none !important;animation:none !important}}
+</style>
+</head>
+<body>
+
+<div class="ticker">★ Rated <b>5.0</b> on Google · 142 reviews · Breakfast &amp; Lunch inside Fizola Market, Cedar Park ★</div>
+
+<nav>
+  <a class="brand" href="#top">Vista Ridge <span class="yolk">Grill</span></a>
+  <div class="nav-links">
+    <a href="#story">Our Story</a>
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#visit">Visit</a>
+    <a class="nav-order" href="tel:+15129697965">Call to Order</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Cedar Park · inside Fizola Market</span>
+      <h1>Chicago flavor, <span class="y">Texas breakfast.</span></h1>
+      <p class="lede">A family-owned grill turning out <b>loaded breakfast tacos, brisket philly, real Chicago Italian beef</b>, and homemade salsas that keep the whole neighborhood coming back.</p>
+      <div class="cta-row">
+        <a class="btn btn-red" href="tel:+15129697965">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.8 2Z"/></svg>
+          Call to order · (512) 969-7965
+        </a>
+        <a class="btn btn-cream" href="#menu">See the menu</a>
+      </div>
+      <div class="hours-note">Open <b>Mon–Fri 6:30a–2p</b> · Sat 7:30a–12p · Closed Sunday</div>
+    </div>
+    <aside class="ratecard" aria-label="Rated 5.0 out of 5 from 142 Google reviews">
+      <div class="big">5.0</div>
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <div class="sub">142 reviews on Google</div>
+      <div class="divider"></div>
+      <div class="loc"><b>Find us inside:</b><br>700 N Vista Ridge Blvd<br>Cedar Park, TX 78613<br><span style="opacity:.8">(inside Fizola Market, at the Valero ⛽)</span></div>
+    </aside>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="strip" aria-hidden="true">
+  <div class="marquee">
+    <span>Breakfast Tacos <i class="s">✦</i> Italian Beef <i class="s">✦</i> Brisket Philly <i class="s">✦</i> The Caveman <i class="s">✦</i> Homemade Salsas <i class="s">✦</i> Loaded Tots <i class="s">✦</i> Bacon-Wrapped Churros <i class="s">✦</i></span>
+    <span>Breakfast Tacos <i class="s">✦</i> Italian Beef <i class="s">✦</i> Brisket Philly <i class="s">✦</i> The Caveman <i class="s">✦</i> Homemade Salsas <i class="s">✦</i> Loaded Tots <i class="s">✦</i> Bacon-Wrapped Churros <i class="s">✦</i></span>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="wrap story-grid">
+    <div>
+      <span class="eyebrow">The hidden gem</span>
+      <h2>Best breakfast in Cedar Park is <em>inside a gas station.</em></h2>
+      <p>Tucked inside Fizola Market at the Valero, Vista Ridge Grill is the kind of spot regulars swear by. <b>Family-owned and women-owned</b>, with owner TJ bringing real <b>Chicago roots</b> — that's why the Italian beef is the real deal.</p>
+      <p>Everything's <b>made fresh and made big</b>: individually fried eggs on the breakfast tacos, seasoned potatoes crisped to perfection, brisket and bacon cooked just right, and homemade hot sauces folks drive across town for.</p>
+      <p>Grab it to go, pull up for curbside, or eat in. First time? As the crew says — <b>"You'll be back."</b></p>
+    </div>
+    <div class="badges">
+      <div class="badge"><div class="n">5.0★</div><div class="l">Google rating · 142 reviews</div></div>
+      <div class="badge"><div class="n">6:30a</div><div class="l">Breakfast starts early</div></div>
+      <div class="badge"><div class="n">Family</div><div class="l">Owned &amp; women-owned</div></div>
+      <div class="badge"><div class="n">$</div><div class="l">Most items $1–10</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu-head">
+      <span class="eyebrow">Made fresh · order ahead</span>
+      <h2>The Menu</h2>
+      <p>Breakfast served all morning, lunch till close. Ask for it your way — they'll take care of you.</p>
+    </div>
+
+    <div class="cat">
+      <div class="cat-title"><h3>Breakfast Tacos</h3><div class="rule"></div></div>
+      <div class="items">
+        <div class="item"><span class="fav">★ Favorite</span><div class="name">The Notorious P.I.G.</div><p class="desc">Loaded pork-lover's taco — the one regulars come back for.</p></div>
+        <div class="item"><div class="name">The Average Joe</div><p class="desc">Hearty, no-nonsense breakfast taco done right.</p></div>
+        <div class="item"><div class="name">Potato, Egg &amp; Cheese</div><p class="desc">Individually fried egg, crispy seasoned potatoes, cheese.</p></div>
+        <div class="item"><div class="name">Migas</div><p class="desc">Egg, crispy tortilla chips, cheese and grilled pico.</p></div>
+        <div class="item"><div class="name">Build Your Own</div><p class="desc">Pick your fillings — add bacon, sausage, or brisket.</p></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-title"><h3>Burritos &amp; Sandwiches</h3><div class="rule"></div></div>
+      <div class="items">
+        <div class="item"><span class="fav">★ Massive</span><div class="name">The Caveman Burrito</div><p class="desc">Overflowing breakfast burrito — huge for the price.</p></div>
+        <div class="item"><span class="fav">★ Favorite</span><div class="name">The Wake-Up Call</div><p class="desc">The signature breakfast sandwich to start your day.</p></div>
+        <div class="item"><div class="name">Spicy Fried Egg Sandwich</div><p class="desc">Fried egg with the perfect amount of heat.</p></div>
+        <div class="item"><div class="name">Fried Egg &amp; Brisket</div><p class="desc">Tender brisket and a fried egg — a customer favorite.</p></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-title"><h3>Lunch · Chicago &amp; Beyond</h3><div class="rule"></div></div>
+      <div class="items">
+        <div class="item"><span class="fav">★ Chicago classic</span><div class="name">Italian Beef Sandwich</div><p class="desc">Real Chicago-style Italian beef — TJ's specialty.</p></div>
+        <div class="item"><span class="fav">★ Favorite</span><div class="name">Brisket Philly</div><p class="desc">Tender brisket, melted cheese, grilled peppers. Heaven.</p></div>
+        <div class="item"><div class="name">The Italian Sub</div><p class="desc">Generous, authentic, "top 3 in Austin" per the regulars.</p></div>
+        <div class="item"><div class="name">Grilled Burger</div><p class="desc">A fresh, juicy griddle burger done to order.</p></div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <div class="cat-title"><h3>Loaded Sides &amp; Sweet</h3><div class="rule"></div></div>
+      <div class="items">
+        <div class="item"><span class="fav">★ Crispy</span><div class="name">Breakfast Potatoes</div><p class="desc">Crispy perfection — the perfect side to anything.</p></div>
+        <div class="item"><div class="name">Loaded Fries</div><p class="desc">Fries piled high with the good stuff.</p></div>
+        <div class="item"><div class="name">Loaded Tots</div><p class="desc">Crispy tots, loaded and ready.</p></div>
+        <div class="item"><span class="fav">★ Sweet + savory</span><div class="name">Bacon-Wrapped Churros</div><p class="desc">The wild-card dessert everyone talks about.</p></div>
+        <div class="item"><div class="name">Fresh Coffee</div><p class="desc">High-quality coffee to round out breakfast.</p></div>
+      </div>
+    </div>
+
+    <p class="menu-note">Every order comes with their homemade salsas &amp; hot sauces. Most items $1–10 · order by phone or at the counter. Catering available — just ask.</p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Straight from Google · 5.0★</span>
+    <h2>The neighborhood is obsessed.</h2>
+    <p class="sub">A perfect 5.0 across 142 reviews — here's a taste of why.</p>
+    <div class="r-grid">
+      <div class="rev"><div class="st" aria-hidden="true">★★★★★</div><p class="q"><span class="em">"THE BEST sandwich I've had in Cedar Park by far"</span> — generous portions, fresh, made authentically.</p><div class="who"><span class="av">A</span><div class="meta"><b>Google Review</b><small>Italian sub · Cedar Park</small></div></div></div>
+      <div class="rev"><div class="st" aria-hidden="true">★★★★★</div><p class="q">The fried egg &amp; brisket sandwich was superb and the breakfast potatoes crispy perfection. <span class="em">"This place is to DIE for!"</span></p><div class="who"><span class="av">S</span><div class="meta"><b>Google Review</b><small>Breakfast · repeat visitor</small></div></div></div>
+      <div class="rev"><div class="st" aria-hidden="true">★★★★★</div><p class="q"><span class="em">"Incredible breakfast burritos — MASSIVE for the price!"</span> The Caveman and the tacos were overflowing.</p><div class="who"><span class="av">C</span><div class="meta"><b>Google Review</b><small>The Caveman · new regular</small></div></div></div>
+      <div class="rev"><div class="st" aria-hidden="true">★★★★★</div><p class="q">A Chicago expat's verdict on the Italian beef and homemade salsas: <span class="em">"out of this world."</span></p><div class="who"><span class="av">T</span><div class="meta"><b>Google Review</b><small>Italian beef · Chicago expat</small></div></div></div>
+      <div class="rev"><div class="st" aria-hidden="true">★★★★★</div><p class="q"><span class="em">"Holey moley this place is amazing good."</span> Tender, juicy brisket philly with melted cheese and grilled peppers.</p><div class="who"><span class="av">B</span><div class="meta"><b>Google Review</b><small>Brisket Philly</small></div></div></div>
+      <div class="rev"><div class="st" aria-hidden="true">★★★★★</div><p class="q">Fantastic breakfast tacos and <span class="em">"even the salsas were uniquely delicious."</span> Friendly, fast service.</p><div class="who"><span class="av">J</span><div class="meta"><b>Google Review</b><small>Breakfast tacos</small></div></div></div>
+    </div>
+    <div class="rev-cta">
+      <a class="btn btn-cream" href="https://www.google.com/maps/place/?q=place_id:ChIJP_ezPrItW4YRWFlUgHUhDnw" target="_blank" rel="noopener">Read all 142 reviews on Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER / VISIT -->
+<section class="order" id="visit">
+  <div class="wrap">
+    <span class="eyebrow">Come hungry</span>
+    <h2>Order &amp; visit</h2>
+    <p class="sub">No apps needed — call ahead and it'll be ready, pull up for curbside, or eat in. Catering available for your crew.</p>
+    <div class="order-grid">
+      <div class="order-info">
+        <div class="ways"><span class="way">Call ahead</span><span class="way">Curbside</span><span class="way">Takeout</span><span class="way">Dine-in</span><span class="way">Catering</span></div>
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div><div class="lbl">Address</div><div class="val"><a href="https://www.google.com/maps/dir/?api=1&destination=700+N+Vista+Ridge+Blvd,+Cedar+Park,+TX+78613" target="_blank" rel="noopener">700 N Vista Ridge Blvd, Cedar Park, TX 78613</a><br><span style="color:var(--slate);font-size:14px">Inside Fizola Market (at the Valero)</span></div></div></div>
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.8 2Z"/></svg><div><div class="lbl">Phone</div><div class="val"><a href="tel:+15129697965">(512) 969-7965</a></div></div></div>
+        <div class="vrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><div class="lbl">Hours</div><div class="val">Mon–Fri · 6:30 AM – 2:00 PM<br>Saturday · 7:30 AM – 12:00 PM<br><span style="color:var(--slate)">Sunday · Closed</span></div></div></div>
+        <a class="btn btn-red" href="tel:+15129697965">Call to place your order</a>
+      </div>
+      <div class="order-map">
+        <iframe title="Map to Vista Ridge Grill, 700 N Vista Ridge Blvd, Cedar Park, TX" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=700%20N%20Vista%20Ridge%20Blvd%2C%20Cedar%20Park%2C%20TX%2078613&z=15&ie=UTF8&output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand">Vista Ridge <span class="y">Grill</span></div>
+      <p class="foot-tag">Family-owned breakfast &amp; lunch inside Fizola Market. Chicago flavor, Texas breakfast. Come hungry.</p>
+      <div style="margin-top:16px">
+        <a href="https://www.facebook.com/VistaRidgeGrill/" target="_blank" rel="noopener" style="display:inline-block;margin-right:16px">Facebook</a>
+        <a href="https://www.instagram.com/vistaridgegrill" target="_blank" rel="noopener" style="display:inline-block">Instagram</a>
+      </div>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=700+N+Vista+Ridge+Blvd,+Cedar+Park,+TX+78613" target="_blank" rel="noopener">700 N Vista Ridge Blvd<br>Cedar Park, TX 78613</a>
+      <a href="tel:+15129697965">(512) 969-7965</a>
+    </div>
+    <div>
+      <h4>Hours</h4>
+      <div class="hours-row"><span>Mon – Fri</span><span>6:30a – 2:00p</span></div>
+      <div class="hours-row"><span>Saturday</span><span>7:30a – 12:00p</span></div>
+      <div class="hours-row"><span>Sunday</span><span class="cl">Closed</span></div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Vista Ridge Grill · Cedar Park, TX</span>
+    <span>Breakfast · Lunch · Catering · Dine-in · Takeout</span>
+  </div>
+</footer>
+
+</body>
+</html>
